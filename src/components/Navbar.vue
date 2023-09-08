@@ -82,7 +82,7 @@ const closeNav = () => {
             >Top Tracks</router-link
           >
           <a href="/" @click="disconnectUser, toggleNav" v-if="isLoggedIn"
-            >Déconnexion</a
+            >Se déconnecter</a
           >
         </nav>
       </div>
@@ -102,7 +102,9 @@ const closeNav = () => {
       </div>
       <div class="flex justify-end">
         <nav class="flex items-center space-x-6 text-sm font-medium">
-          <a href="/" @click="disconnectUser" v-if="isLoggedIn">Déconnexion</a>
+          <a href="/" @click="disconnectUser" v-if="isLoggedIn"
+            >Se déconnecter</a
+          >
         </nav>
       </div>
     </div>

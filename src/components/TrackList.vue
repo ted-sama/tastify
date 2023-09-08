@@ -40,7 +40,7 @@ onUnmounted(() => {
           <td>
             <div class="flex items-center space-x-3">
               <div class="avatar">
-                <div class="w-10 rounded-md">
+                <div class="w-10">
                   <a
                     :href="`https://open.spotify.com/track/${track.id}`"
                     target="_blank"
@@ -78,7 +78,7 @@ onUnmounted(() => {
           <td>
             <div class="flex items-center space-x-3">
               <div class="avatar">
-                <div class="w-16 rounded-xl">
+                <div class="w-16">
                   <a
                     :href="`https://open.spotify.com/track/${track.id}`"
                     target="_blank"

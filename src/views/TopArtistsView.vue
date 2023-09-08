@@ -3,6 +3,7 @@ import { RouterLink } from "vue-router";
 import { onMounted, ref } from "vue";
 import axios from "axios";
 import ArtistList from "../components/ArtistList.vue";
+import Footer from "../components/Footer.vue";
 
 const artistData = ref({});
 const termClicked = ref("short");
@@ -73,4 +74,5 @@ onMounted(() => {
     </div>
     <ArtistList :artists="artistData" />
   </div>
+  <Footer />
 </template>

@@ -20,7 +20,7 @@ defineProps({
         <div class="text-xl font-bold mb-2 md:text-2xl">{{ nb + 1 }}</div>
       </div>
       <div class="avatar justify-center">
-        <div class="w-48 rounded-xl">
+        <div class="w-48">
           <a
             :href="`https://open.spotify.com/artist/${artist.id}`"
             target="_blank"
