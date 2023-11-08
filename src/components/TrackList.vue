@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from "vue";
+import {onMounted, onUnmounted, ref} from "vue";
 
 defineProps({
   tracks: {
@@ -35,29 +35,29 @@ onUnmounted(() => {
   <div class="overflow-x-hidden" v-if="screenWidth < 1362">
     <table class="table">
       <tbody>
-        <tr v-for="(track, nb) in tracks.items" :key="track.id">
-          <th class="w-4">{{ nb + 1 }}</th>
-          <td>
-            <div class="flex items-center space-x-3">
-              <div class="avatar">
-                <div class="w-10">
-                  <a
+      <tr v-for="(track, nb) in tracks.items" :key="track.id">
+        <th class="w-4">{{ nb + 1 }}</th>
+        <td>
+          <div class="flex items-center space-x-3">
+            <div class="avatar">
+              <div class="w-10">
+                <a
                     :href="`https://open.spotify.com/track/${track.id}`"
                     target="_blank"
-                  >
-                    <img :src="track.album.images[0].url" alt="Album Image" />
-                  </a>
-                </div>
-              </div>
-              <div>
-                <div class="text-xs font-bold md:text-sm">{{ track.name }}</div>
-                <div class="text-sm opacity-50">
-                  {{ getArtists(track.artists) }}
-                </div>
+                >
+                  <img :src="track.album.images[0].url" alt="Album Image"/>
+                </a>
               </div>
             </div>
-          </td>
-        </tr>
+            <div>
+              <div class="text-xs font-bold md:text-sm">{{ track.name }}</div>
+              <div class="text-sm opacity-50">
+                {{ getArtists(track.artists) }}
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
       </tbody>
     </table>
   </div>
@@ -65,38 +65,38 @@ onUnmounted(() => {
   <div class="overflow-x-auto w-[1280px]" v-else>
     <table class="table table-fixed">
       <thead>
-        <tr>
-          <th class="w-10"></th>
-          <th>Titre</th>
-          <th>Artiste</th>
-          <th>Album</th>
-        </tr>
+      <tr>
+        <th class="w-10"></th>
+        <th>Titre</th>
+        <th>Artiste</th>
+        <th>Album</th>
+      </tr>
       </thead>
       <tbody>
-        <tr v-for="(track, nb) in tracks.items" :key="track.id">
-          <th>{{ nb + 1 }}</th>
-          <td>
-            <div class="flex items-center space-x-3">
-              <div class="avatar">
-                <div class="w-16">
-                  <a
+      <tr v-for="(track, nb) in tracks.items" :key="track.id">
+        <th>{{ nb + 1 }}</th>
+        <td>
+          <div class="flex items-center space-x-3">
+            <div class="avatar">
+              <div class="w-16">
+                <a
                     :href="`https://open.spotify.com/track/${track.id}`"
                     target="_blank"
-                  >
-                    <img :src="track.album.images[0].url" alt="Album Image" />
-                  </a>
-                </div>
-              </div>
-              <div>
-                <div class="text-xs font-bold md:text-sm">{{ track.name }}</div>
+                >
+                  <img :src="track.album.images[0].url" alt="Album Image"/>
+                </a>
               </div>
             </div>
-          </td>
-          <td>
-            {{ getArtists(track.artists) }}
-          </td>
-          <td>{{ track.album.name }}</td>
-        </tr>
+            <div>
+              <div class="text-xs font-bold md:text-sm">{{ track.name }}</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          {{ getArtists(track.artists) }}
+        </td>
+        <td>{{ track.album.name }}</td>
+      </tr>
       </tbody>
     </table>
   </div>

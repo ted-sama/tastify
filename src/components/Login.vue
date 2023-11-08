@@ -17,7 +17,7 @@ const handleLogin = () => {
 </script>
 
 <template>
-  <div class="card w-[1280px] bg-card">
+  <div class="card w-full bg-card">
     <div class="card-body items-center text-center">
       <h1 class="card-title mb-2 text-3xl font-medium">Tastify!</h1>
       <p class="mb-4">

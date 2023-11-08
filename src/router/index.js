@@ -30,6 +30,14 @@ const router = createRouter({
         title: "Top Tracks",
       },
     },
+    {
+      path: "/recent",
+      name: "recent",
+      component: () => import("../views/RecentView.vue"),
+      meta: {
+        title: "Recently Played",
+      },
+    },
   ],
 });
 

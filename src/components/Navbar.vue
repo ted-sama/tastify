@@ -76,11 +76,14 @@ const closeNav = () => {
           class="relative flex flex-col items-center text-md font-medium p-6 space-y-3"
         >
           <router-link :to="{ name: 'topartists' }" @click="toggleNav"
-            >Top Artists</router-link
-          >
+            >Top Artists
+          </router-link>
           <router-link :to="{ name: 'toptracks' }" @click="toggleNav"
-            >Top Tracks</router-link
-          >
+            >Top Tracks
+          </router-link>
+          <router-link :to="{ name: 'recent' }" @click="toggleNav"
+            >Recently Played
+          </router-link>
           <a href="/" @click="disconnectUser, toggleNav" v-if="isLoggedIn"
             >Se déconnecter</a
           >
@@ -98,6 +101,7 @@ const closeNav = () => {
         <nav class="flex items-center space-x-6 text-sm font-medium">
           <router-link :to="{ name: 'topartists' }">Top Artists</router-link>
           <router-link :to="{ name: 'toptracks' }">Top Tracks</router-link>
+          <router-link :to="{ name: 'recent' }">Recently Played</router-link>
         </nav>
       </div>
       <div class="flex justify-end">

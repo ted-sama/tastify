@@ -1,6 +1,6 @@
 <script setup>
-import { onMounted } from "vue";
-import { RouterLink } from "vue-router";
+import {onMounted} from "vue";
+import {RouterLink} from "vue-router";
 
 let access_token = null;
 let type = null;
@@ -10,15 +10,15 @@ let currentTime = null;
 onMounted(() => {
   const hash = location.hash;
   access_token = hash
-    .substring(1)
-    .split("&")
-    .find((elem) => elem.startsWith("access_token"))
-    .split("=")[1];
+      .substring(1)
+      .split("&")
+      .find((elem) => elem.startsWith("access_token"))
+      .split("=")[1];
   type = hash
-    .substring(1)
-    .split("&")
-    .find((elem) => elem.startsWith("token_type"))
-    .split("=")[1];
+      .substring(1)
+      .split("&")
+      .find((elem) => elem.startsWith("token_type"))
+      .split("=")[1];
 
   currentTime = Date.now();
   expires_at = currentTime + 3600000; // 1 hour, js operate with milliseconds

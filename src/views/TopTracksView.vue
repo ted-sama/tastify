@@ -3,7 +3,6 @@ import { RouterLink } from "vue-router";
 import { onMounted, ref } from "vue";
 import axios from "axios";
 import TrackList from "../components/TrackList.vue";
-import Footer from "../components/Footer.vue";
 
 const trackData = ref({});
 const termClicked = ref("short");
@@ -74,5 +73,4 @@ onMounted(() => {
     </div>
     <TrackList :tracks="trackData" />
   </div>
-  <Footer />
 </template>
