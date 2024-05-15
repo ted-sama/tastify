@@ -17,7 +17,7 @@ const getTrackData = (term) => {
       ? "4 dernières semaines"
       : term === "medium"
       ? "6 derniers mois"
-      : "Tout les temps";
+      : "12 derniers mois";
   var endpoint = `https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=50&offset=0`;
   if (term === "short") {
     var endpoint = `https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=50&offset=0`;
@@ -67,7 +67,7 @@ onMounted(() => {
           @click="getTrackData('long')"
           :disabled="termClicked === 'long'"
         >
-          Tout les temps
+          12 derniers mois
         </button>
       </div>
     </div>

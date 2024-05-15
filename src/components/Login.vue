@@ -7,7 +7,7 @@ import {
   RESPONSE_TYPE,
   SPACE_DELIMITER,
   SCOPES,
-} from "../../config.json";
+} from "../../prodconfig.json";
 
 const SCOPES_URL_PARAM = SCOPES.join(SPACE_DELIMITER);
 
